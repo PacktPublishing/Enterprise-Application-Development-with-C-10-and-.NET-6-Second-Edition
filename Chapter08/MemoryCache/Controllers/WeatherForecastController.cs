@@ -52,6 +52,7 @@ namespace MemoryCache.Controllers
                 Summary = "Hello"
             }).ToArray();
         }
+
         private void EvictionCallback(object key, object value, EvictionReason reason, object state)
         {
             Debug.WriteLine(reason);

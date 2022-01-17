@@ -39,4 +39,16 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+builder.Services.AddControllers(options =>
+{
+    options.CacheProfiles.Add("Default", new CacheProfile
+    {
+        Duration = 500,
+        VaryByHeader = "user-agent",
+        Location = ResponseCacheLocation.Any,
+        VaryByQueryKeys = new[] { "Id" }
+    });
+});
+
+
 app.Run();
