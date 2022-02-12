@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<table class="table">
+    <tbody>
+        @foreach (var item in Model.Employees)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem =>
+                item.EmployeeId)</td>
+                <td>@Html.DisplayFor(modelItem =>
+                item.Name)</td>
+                <td>@Html.DisplayFor(modelItem =>
+                item.Email)</td>
+                <td>
+                    @foreach (var address in item.Address)
+                    {
+                        @Html.DisplayFor(modelItem => address.City) @Html.DisplayName(" ")
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
