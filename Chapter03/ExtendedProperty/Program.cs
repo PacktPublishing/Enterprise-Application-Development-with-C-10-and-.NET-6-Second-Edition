@@ -14,8 +14,10 @@ Product product = new Product
     }
 };
 
+// Accessing the extended propers 
 if (product is Product { Location: { Country: "USA" } })
     Console.WriteLine("USA");
 
+// Accessing the extended properties with additional support in C#10
 if (product is Product { Location.Country: "USA" })
     Console.WriteLine("USA");
