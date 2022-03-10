@@ -243,3 +243,13 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+/Enterprise Application/src/platform-apis/core/Packt.Ecommerce.Caching/Packt.Ecommerce.Caching.xml
+/Enterprise Application/src/platform-apis/core/Packt.Ecommerce.Common/Packt.Ecommerce.Common.xml
+/Enterprise Application/src/platform-apis/data/Packt.Ecommerce.Data.Models/Packt.Ecommerce.Data.Models.xml
+/Enterprise Application/src/platform-apis/data/Packt.Ecommerce.DataStore/Packt.Ecommerce.DataStore.xml
+/Enterprise Application/src/platform-apis/data/Packt.Ecommerce.DTO.Models/Packt.Ecommerce.DTO.Models.xml
+/Enterprise Application/src/platform-apis/services/Packt.Ecommerce.DataAccess/Packt.Ecommerce.DataAccess.xml
+/Enterprise Application/src/platform-apis/services/Packt.Ecommerce.Invoice/Packt.Ecommerce.Invoice.xml
+/Enterprise Application/src/platform-apis/services/Packt.Ecommerce.Order/Packt.Ecommerce.Order.xml
+/Enterprise Application/src/platform-apis/services/Packt.Ecommerce.Product/Packt.Ecommerce.Product.xml
+/Enterprise Application/src/webapp/Packt.Ecommerce.Web/Packt.Ecommerce.Web.xml
