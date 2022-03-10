@@ -21,7 +21,7 @@ namespace Packt.Ecommerce.Order.Contracts
         /// </summary>
         /// <param name="filterCriteria">Criteria to filter orders.</param>
         /// <returns>List of orders with minimum details.</returns>
-        Task<IEnumerable<OrderDetailsViewModel>> GetOrdersAsync(string filterCriteria = null);
+        Task<IEnumerable<OrderDetailsViewModel>> GetOrdersAsync(string? filterCriteria = null);
 
         /// <summary>
         /// Gets the order by identifier asynchronously.

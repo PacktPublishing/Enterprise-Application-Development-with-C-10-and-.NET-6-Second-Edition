@@ -21,7 +21,7 @@ namespace Packt.Ecommerce.Product.Contracts
         /// </summary>
         /// <param name="filterCriteria">Criteria to filter products.</param>
         /// <returns>List of products with minimum details.</returns>
-        Task<IEnumerable<ProductListViewModel>> GetProductsAsync(string filterCriteria = null);
+        Task<IEnumerable<ProductListViewModel>> GetProductsAsync(string? filterCriteria = null);
 
         /// <summary>
         /// Gets the product by identifier asynchronously.

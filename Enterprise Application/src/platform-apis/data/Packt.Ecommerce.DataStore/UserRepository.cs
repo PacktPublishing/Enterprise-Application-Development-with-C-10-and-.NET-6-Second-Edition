@@ -1,4 +1,10 @@
-﻿namespace Packt.Ecommerce.DataStore
+﻿// "//-----------------------------------------------------------------------".
+// <copyright file="UserRepository.cs" company="Packt">
+// Copyright (c) 2020 Packt Corporation. All rights reserved.
+// </copyright>
+// "//-----------------------------------------------------------------------".
+
+namespace Packt.Ecommerce.DataStore
 {
     using Microsoft.Azure.Cosmos;
     using Microsoft.Extensions.Options;

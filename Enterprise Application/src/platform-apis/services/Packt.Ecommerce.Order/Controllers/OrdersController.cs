@@ -1,4 +1,4 @@
-﻿// "//-----------------------------------------------------------------------".
+// "//-----------------------------------------------------------------------".
 // <copyright file="OrdersController.cs" company="Packt">
 // Copyright (c) 2020 Packt Corporation. All rights reserved.
 // </copyright>
@@ -41,7 +41,7 @@ namespace Packt.Ecommerce.Order.Controllers
         /// <param name="filterCriteria">Order filter criteria.</param>
         /// <returns>Orders.</returns>
         [HttpGet]
-        public async Task<IActionResult> GetOrdersAsync([FromQuery] string filterCriteria = null)
+        public async Task<IActionResult> GetOrdersAsync([FromQuery] string? filterCriteria = null)
         {
             var orders = await this.orderService.GetOrdersAsync(filterCriteria).ConfigureAwait(false);
             if (orders.Any())

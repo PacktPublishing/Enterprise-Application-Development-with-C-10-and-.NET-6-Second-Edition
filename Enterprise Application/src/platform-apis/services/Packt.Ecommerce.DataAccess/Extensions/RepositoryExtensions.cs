@@ -3,6 +3,7 @@
 // Copyright (c) 2020 Packt Corporation. All rights reserved.
 // </copyright>
 // "//-----------------------------------------------------------------------".
+
 namespace Packt.Ecommerce.DataAccess.Extensions
 {
     using Microsoft.Extensions.DependencyInjection;

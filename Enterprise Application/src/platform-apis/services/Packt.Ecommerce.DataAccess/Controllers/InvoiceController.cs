@@ -41,7 +41,7 @@ namespace Packt.Ecommerce.DataAccess.Controllers
         /// <param name="filterCriteria">The filter criteria.</param>
         /// <returns>Invoice.</returns>
         [HttpGet]
-        public async Task<IActionResult> GetAllInvoiceAsync(string filterCriteria = null)
+        public async Task<IActionResult> GetAllInvoiceAsync(string? filterCriteria = null)
         {
             IEnumerable<Invoice> invoice;
             if (string.IsNullOrEmpty(filterCriteria))

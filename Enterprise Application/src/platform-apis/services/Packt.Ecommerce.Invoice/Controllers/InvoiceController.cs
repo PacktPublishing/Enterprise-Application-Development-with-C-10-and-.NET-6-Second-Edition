@@ -1,4 +1,4 @@
-﻿// "//-----------------------------------------------------------------------".
+// "//-----------------------------------------------------------------------".
 // <copyright file="InvoiceController.cs" company="Packt">
 // Copyright (c) 2020 Packt Corporation. All rights reserved.
 // </copyright>

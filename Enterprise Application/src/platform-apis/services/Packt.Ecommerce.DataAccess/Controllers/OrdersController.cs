@@ -41,7 +41,7 @@ namespace Packt.Ecommerce.DataAccess.Controllers
         /// <param name="filterCriteria">The filter criteria.</param>
         /// <returns>Order.</returns>
         [HttpGet]
-        public async Task<IActionResult> GetAllOrdersync(string filterCriteria = null)
+        public async Task<IActionResult> GetAllOrdersync(string? filterCriteria = null)
         {
             IEnumerable<Order> order;
             if (string.IsNullOrEmpty(filterCriteria))

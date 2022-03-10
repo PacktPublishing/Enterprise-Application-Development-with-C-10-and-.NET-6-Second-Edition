@@ -6,7 +6,6 @@
 
 namespace Packt.Ecommerce.DataAccess.Controllers
 {
-    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.Linq;
@@ -43,7 +42,7 @@ namespace Packt.Ecommerce.DataAccess.Controllers
         /// <param name="filterCriteria">The filter criteria.</param>
         /// <returns>Products.</returns>
         [HttpGet]
-        public async Task<IActionResult> GetAllProductAsync(string filterCriteria = null)
+        public async Task<IActionResult> GetAllProductAsync(string? filterCriteria = null)
         {
             IEnumerable<Product> products;
             if (string.IsNullOrEmpty(filterCriteria))

@@ -5,7 +5,6 @@
 // "//-----------------------------------------------------------------------".
 namespace Packt.Ecommerce.DataStore
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
@@ -33,7 +32,6 @@ where TEntity : class
         public BaseRepository(CosmosClient cosmosClient, string databaseName, string containerName)
         {
             this.container = cosmosClient?.GetContainer(databaseName, containerName);
-            cosmosClient?.GetDatabase(databaseName).CreateContainerIfNotExistsAsync(containerName, "/id").GetAwaiter().GetResult();
         }
 
         /// <inheritdoc/>

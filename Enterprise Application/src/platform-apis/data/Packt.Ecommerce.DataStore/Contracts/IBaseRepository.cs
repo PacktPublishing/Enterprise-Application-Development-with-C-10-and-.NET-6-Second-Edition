@@ -5,9 +5,9 @@
 // "//-----------------------------------------------------------------------".
 namespace Packt.Ecommerce.DataStore.Contracts
 {
-    using Microsoft.Azure.Cosmos;
     using System.Collections.Generic;
     using System.Threading.Tasks;
+    using Microsoft.Azure.Cosmos;
 
     /// <summary>
     /// The generic repository.

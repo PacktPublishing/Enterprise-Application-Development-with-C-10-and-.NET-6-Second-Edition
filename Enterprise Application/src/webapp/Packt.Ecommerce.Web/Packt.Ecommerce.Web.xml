@@ -263,49 +263,5 @@
             <param name="response">The response.</param>
             <returns>The task.</returns>
         </member>
-        <member name="T:Packt.Ecommerce.Web.Startup">
-            <summary>
-            Startup class.
-            </summary>
-        </member>
-        <member name="M:Packt.Ecommerce.Web.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Packt.Ecommerce.Web.Startup"/> class.
-            </summary>
-            <param name="configuration">The configuration.</param>
-        </member>
-        <member name="P:Packt.Ecommerce.Web.Startup.Configuration">
-            <summary>
-            Gets the configuration.
-            </summary>
-            <value>
-            The configuration.
-            </value>
-        </member>
-        <member name="M:Packt.Ecommerce.Web.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
-            <summary>
-            This method gets called by the runtime. Use this method to add services to the container.
-            </summary>
-            <param name="services">The services.</param>
-        </member>
-        <member name="M:Packt.Ecommerce.Web.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
-            <summary>
-            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-            </summary>
-            <param name="app">The application.</param>
-            <param name="env">The env.</param>
-        </member>
-        <member name="M:Packt.Ecommerce.Web.Startup.RetryPolicy">
-            <summary>
-            The Retry policy.
-            </summary>
-            <returns>HttpResponseMessage.</returns>
-        </member>
-        <member name="M:Packt.Ecommerce.Web.Startup.CircuitBreakerPolicy">
-            <summary>
-            Gets the circuit breaker policy.
-            </summary>
-            <returns>HttpResponseMessage.</returns>
-        </member>
     </members>
 </doc>

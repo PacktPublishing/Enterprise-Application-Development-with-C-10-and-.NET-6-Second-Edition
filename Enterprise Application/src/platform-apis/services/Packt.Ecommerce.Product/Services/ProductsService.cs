@@ -70,7 +70,7 @@ namespace Packt.Ecommerce.Product.Services
         }
 
         /// <inheritdoc/>
-        public async Task<IEnumerable<ProductListViewModel>> GetProductsAsync(string filterCriteria = null)
+        public async Task<IEnumerable<ProductListViewModel>> GetProductsAsync(string? filterCriteria = null)
         {
             // cache aside pattern
             var products = await this.cacheService.GetCacheAsync<IEnumerable<Packt.Ecommerce.Data.Models.Product>>($"products{filterCriteria}").ConfigureAwait(false);

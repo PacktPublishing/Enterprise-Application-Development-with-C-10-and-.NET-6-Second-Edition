@@ -79,7 +79,7 @@ namespace Packt.Ecommerce.Order.Services
 
             // Order entity is used for Shopping cart and at any point as there can only be one shopping cart, checking for existing shopping cart
             var getExistingOrder = await this.GetOrdersAsync($" e.UserId = '{order.UserId}' and e.OrderStatus = '{OrderStatus.Cart}' ").ConfigureAwait(false);
-            OrderDetailsViewModel existingOrder = getExistingOrder.FirstOrDefault();
+            OrderDetailsViewModel? existingOrder = getExistingOrder.FirstOrDefault();
             if (existingOrder != null)
             {
                 order.Id = existingOrder.Id;
@@ -125,6 +125,7 @@ namespace Packt.Ecommerce.Order.Services
         /// <inheritdoc/>
         public async Task<OrderDetailsViewModel> GetOrderByIdAsync(string orderId)
         {
+            OrderDetailsViewModel? order = null;
             using var orderRequest = new HttpRequestMessage(HttpMethod.Get, $"{this.applicationSettings.Value.DataStoreEndpoint}api/orders/{orderId}");
             var orderResponse = await this.httpClient.SendAsync(orderRequest).ConfigureAwait(false);
             if (!orderResponse.IsSuccessStatusCode)
@@ -137,17 +138,14 @@ namespace Packt.Ecommerce.Order.Services
                 var orderDAO = await orderResponse.Content.ReadFromJsonAsync<Packt.Ecommerce.Data.Models.Order>().ConfigureAwait(false);
 
                 // Mapping
-                var order = this.autoMapper.Map<OrderDetailsViewModel>(orderDAO);
-                return order;
+                order = this.autoMapper.Map<OrderDetailsViewModel>(orderDAO);
             }
-            else
-            {
-                return null;
-            }
+
+            return order;
         }
 
         /// <inheritdoc/>
-        public async Task<IEnumerable<OrderDetailsViewModel>> GetOrdersAsync(string filterCriteria = null)
+        public async Task<IEnumerable<OrderDetailsViewModel>> GetOrdersAsync(string? filterCriteria = null)
         {
             // TO DO - Integrate user id filter from token.
             using var orderRequest = new HttpRequestMessage(HttpMethod.Get, $"{this.applicationSettings.Value.DataStoreEndpoint}api/orders?filterCriteria={filterCriteria}");

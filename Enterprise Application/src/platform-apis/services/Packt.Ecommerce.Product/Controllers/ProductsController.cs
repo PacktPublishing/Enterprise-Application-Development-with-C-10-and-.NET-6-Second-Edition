@@ -41,7 +41,7 @@ namespace Packt.Ecommerce.Product.Controllers
         /// <param name="filterCriteria">Product filter criteria.</param>
         /// <returns>Products.</returns>
         [HttpGet]
-        public async Task<IActionResult> GetProductsAsync([FromQuery] string filterCriteria = null)
+        public async Task<IActionResult> GetProductsAsync([FromQuery] string? filterCriteria = null)
         {
             var products = await this.productService.GetProductsAsync(filterCriteria).ConfigureAwait(false);
             if (products.Any())
@@ -62,7 +62,7 @@ namespace Packt.Ecommerce.Product.Controllers
         /// <returns>Product.</returns>
         [HttpGet]
         [Route("{id}")]
-        public async Task<IActionResult> GetProductById(string id, [FromQuery][Required]string name)
+        public async Task<IActionResult> GetProductById(string id, [FromQuery][Required] string name)
         {
             var product = await this.productService.GetProductByIdAsync(id, name).ConfigureAwait(false);
             if (product != null)
@@ -125,7 +125,7 @@ namespace Packt.Ecommerce.Product.Controllers
         /// <returns>The HTTP Response.</returns>
         [HttpDelete]
         [Route("{id}")]
-        public async Task<IActionResult> DeleteProductAsync(string id, [FromQuery][Required]string name)
+        public async Task<IActionResult> DeleteProductAsync(string id, [FromQuery][Required] string name)
         {
             var result = await this.productService.DeleteProductAsync(id, name).ConfigureAwait(false);
             if (result.StatusCode == System.Net.HttpStatusCode.Accepted)

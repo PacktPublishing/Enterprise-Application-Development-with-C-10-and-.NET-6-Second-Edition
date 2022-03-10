@@ -42,7 +42,7 @@ namespace Packt.Ecommerce.DataAccess.Controllers
         /// <param name="filterCriteria">The filter criteria.</param>
         /// <returns>Users.</returns>
         [HttpGet]
-        public async Task<IActionResult> GetAllUsersAsync(string filterCriteria = null)
+        public async Task<IActionResult> GetAllUsersAsync(string? filterCriteria = null)
         {
             IEnumerable<User> users;
             if (string.IsNullOrEmpty(filterCriteria))
