@@ -5,6 +5,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>afd0a73d-e5b9-4ea2-9c39-23f6dda8a40c</UserSecretsId>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>Packt.Ecommerce.Product.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

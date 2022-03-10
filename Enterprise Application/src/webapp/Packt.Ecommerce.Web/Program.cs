@@ -37,10 +37,10 @@ builder.Services.AddHealthChecks()
     .AddUrlGroup(new Uri(builder.Configuration.GetValue<string>("ApplicationSettings:OrdersApiEndpoint")), name: "Order Service")
     .AddProcessMonitorHealthCheck("notepad", name: "Notepad monitor");
 
-////builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-////   .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAdB2C"));
+builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+   .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAdB2C"));
 
-////builder.Services.AddRazorPages().AddMicrosoftIdentityUI();
+builder.Services.AddRazorPages().AddMicrosoftIdentityUI();
 
 var app = builder.Build();
 
@@ -62,9 +62,9 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-////app.UseAuthentication();
+app.UseAuthentication();
 
-////app.UseAuthorization();
+app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>
 {

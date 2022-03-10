@@ -16,7 +16,7 @@ namespace Packt.Ecommerce.DTO.Models
     public class ProductDetailsViewModel
     {
         /// <summary>
-        /// Gets or sets the identifier.
+        /// Gets the identifier.
         /// </summary>
         /// <value>
         /// The identifier.
