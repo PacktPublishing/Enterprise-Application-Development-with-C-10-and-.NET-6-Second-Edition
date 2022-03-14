@@ -27,7 +27,17 @@ builder.Services.AddHttpClient<IECommerceService, ECommerceService>()
 
 builder.Services.AddScoped<IECommerceService, ECommerceService>();
 
-builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["ApplicationInsights:InstrumentationKey"]);
+// App insights.
+string appinsightsInstrumentationKey = builder.Configuration.GetValue<string>("ApplicationSettings:InstrumentationKey");
+
+if (!string.IsNullOrWhiteSpace(appinsightsInstrumentationKey))
+{
+    builder.Services.AddLogging(logging =>
+    {
+        logging.AddApplicationInsights(appinsightsInstrumentationKey);
+    });
+    builder.Services.AddApplicationInsightsTelemetry(appinsightsInstrumentationKey);
+}
 
 builder.Services.AddSnapshotCollector((configuration) => builder.Configuration.Bind(nameof(SnapshotCollectorConfiguration), configuration));
 
@@ -53,7 +63,6 @@ if (app.Environment.IsDevelopment())
 else
 {
     app.UseExceptionHandler("/Products/Error/500");
-    app.UseHsts();
 }
 
 app.UseHttpsRedirection();

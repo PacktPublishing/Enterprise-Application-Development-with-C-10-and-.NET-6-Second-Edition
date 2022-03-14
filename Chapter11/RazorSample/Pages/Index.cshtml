@@ -1,0 +1,13 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<form method="post">
+    <div class="text-center">
+        <select asp-for="WeekDaySelected" asp-items="Model.WeekDay"></select>
+        <button type=Submit name="Submit">Submit</button>
+        <br>
+        <h3>@ViewData["Message"]</h3>
+    </div>
+</form>
