@@ -1,12 +1,5 @@
 ﻿namespace Pact.ECommerce.Order.UnitTest
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
-    using System.Threading.Tasks;
     using AutoMapper;
     using Microsoft.Extensions.Options;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -17,6 +10,9 @@
     using Packt.Ecommerce.Order;
     using Packt.Ecommerce.Order.Services;
     using Pact.ECommerce.Order.UnitTest.Helper;
+    using System.Net;
+    using System.Net.Http;
+    using System.Threading.Tasks;
 
     [TestClass]
     public class OrderServiceTest
@@ -29,8 +25,8 @@
             {
                 ResponseMessage = new HttpResponseMessage(HttpStatusCode.OK)
                 {
-                    Content = new StringContent(JsonConvert.SerializeObject(orderResponse))
-                }
+                    Content = new StringContent(JsonConvert.SerializeObject(orderResponse)),
+                },
             };
 
             IOptions<ApplicationSettings> mockOptions = Options.Create<ApplicationSettings>(new ApplicationSettings { DataStoreEndpoint = "https://orderStore.pact.com" });
@@ -38,7 +34,7 @@
 
             var mockMapper = new MapperConfiguration(cfg =>
             {
-                cfg.AddProfile(new AutoMapperProfile()); 
+                cfg.AddProfile(new AutoMapperProfile());
             });
             var mapper = mockMapper.CreateMapper();
 
@@ -46,7 +42,7 @@
             OrdersService testObject = new OrdersService(httpClientFactory, mockOptions, mapper,  mockCacheService.Object);
             var order = testObject.GetOrderByIdAsync("1");
 
-            Assert.AreEqual("1", order.Id);
+            Assert.AreEqual(1, order.Id);
         }
     }
 }
