@@ -6,9 +6,6 @@
 
 namespace Packt.Ecommerce.DTO.Models
 {
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
     /// <summary>
     /// Orders view model.
     /// </summary>

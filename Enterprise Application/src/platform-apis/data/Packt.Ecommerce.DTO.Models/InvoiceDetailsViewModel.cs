@@ -6,8 +6,6 @@
 
 namespace Packt.Ecommerce.DTO.Models
 {
-    using System.Collections.Generic;
-
     /// <summary>
     /// Invoice view model.
     /// </summary>

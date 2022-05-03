@@ -6,9 +6,6 @@
 
 namespace Packt.Ecommerce.Order.Controllers
 {
-    using System;
-    using System.Linq;
-    using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
     using Packt.Ecommerce.DTO.Models;
     using Packt.Ecommerce.Order.Contracts;

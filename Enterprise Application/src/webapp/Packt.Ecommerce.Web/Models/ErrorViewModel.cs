@@ -9,7 +9,7 @@ namespace Packt.Ecommerce.Web.Models
     /// <summary>
     /// Error view model.
     /// </summary>
-    public record ErrorViewModel
+    public record class ErrorViewModel
     {
         /// <summary>
         /// Gets or sets the CorrelationId.

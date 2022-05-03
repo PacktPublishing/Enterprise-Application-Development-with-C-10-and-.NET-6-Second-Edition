@@ -6,7 +6,6 @@
 
 namespace Packt.Ecommerce.Invoice.Contracts
 {
-    using System.Threading.Tasks;
     using Packt.Ecommerce.DTO.Models;
 
     /// <summary>

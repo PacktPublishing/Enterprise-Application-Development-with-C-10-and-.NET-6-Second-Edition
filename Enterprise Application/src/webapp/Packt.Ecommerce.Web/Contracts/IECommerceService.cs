@@ -6,8 +6,6 @@
 
 namespace Packt.Ecommerce.Web.Contracts
 {
-    using System.Collections.Generic;
-    using System.Threading.Tasks;
     using Packt.Ecommerce.DTO.Models;
 
     /// <summary>

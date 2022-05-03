@@ -79,21 +79,15 @@ namespace Packt.Ecommerce.Caching
         }
 
         /// <inheritdoc/>
-        public async Task<string> GetCacheStringAsync(string cacheEntityKey, CancellationToken cancellationToken = default)
-        {
-            return await this.distributedCache.GetStringAsync(cacheEntityKey, cancellationToken).ConfigureAwait(false);
-        }
+        public async Task<string> GetCacheStringAsync(string cacheEntityKey, CancellationToken cancellationToken = default) =>
+            await this.distributedCache.GetStringAsync(cacheEntityKey, cancellationToken).ConfigureAwait(false);
 
         /// <inheritdoc/>
-        public async Task RefreshCacheAsync(string cacheEntityKey, CancellationToken cancellationToken = default)
-        {
+        public async Task RefreshCacheAsync(string cacheEntityKey, CancellationToken cancellationToken = default) =>
             await this.distributedCache.RefreshAsync(cacheEntityKey, cancellationToken).ConfigureAwait(false);
-        }
 
         /// <inheritdoc/>
-        public async Task RemoveCacheAsync(string cacheEntityKey, CancellationToken cancellationToken = default)
-        {
+        public async Task RemoveCacheAsync(string cacheEntityKey, CancellationToken cancellationToken = default) =>
             await this.distributedCache.RemoveAsync(cacheEntityKey, cancellationToken).ConfigureAwait(false);
-        }
     }
 }

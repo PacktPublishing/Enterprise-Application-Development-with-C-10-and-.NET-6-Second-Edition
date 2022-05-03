@@ -6,10 +6,6 @@
 
 namespace Packt.Ecommerce.Web.Controllers
 {
-    using System.Diagnostics;
-    using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Logging;
     using Packt.Ecommerce.Web.Contracts;
     using Packt.Ecommerce.Web.Models;
 

@@ -6,8 +6,6 @@
 
 namespace Packt.Ecommerce.Invoice.Controllers
 {
-    using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Mvc;
     using Packt.Ecommerce.DTO.Models;
     using Packt.Ecommerce.Invoice.Contracts;
 

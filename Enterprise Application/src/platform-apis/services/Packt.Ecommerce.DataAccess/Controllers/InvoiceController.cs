@@ -6,10 +6,6 @@
 
 namespace Packt.Ecommerce.DataAccess.Controllers
 {
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Mvc;
     using Packt.Ecommerce.Data.Models;
     using Packt.Ecommerce.DataStore.Contracts;
 

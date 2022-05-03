@@ -6,9 +6,6 @@
 
 namespace Packt.Ecommerce.DTO.Models
 {
-    using System;
-    using System.Collections.Generic;
-
     /// <summary>
     /// Model bound to UI to list all the products.
     /// </summary>

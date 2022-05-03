@@ -5,8 +5,6 @@
 // "//-----------------------------------------------------------------------".
 namespace Packt.Ecommerce.DTO.Models
 {
-    using System.ComponentModel.DataAnnotations;
-
     /// <summary>
     /// Address view model.
     /// </summary>

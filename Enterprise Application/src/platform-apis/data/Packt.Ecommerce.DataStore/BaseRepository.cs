@@ -15,8 +15,8 @@ namespace Packt.Ecommerce.DataStore
     /// The generic repository.
     /// </summary>
     /// <typeparam name="TEntity">Generic entity if type class.</typeparam>
-    public class BaseRepository<TEntity> : IBaseRepository<TEntity>
-where TEntity : class
+    public class BaseRepository<TEntity> : IBaseRepository<TEntity> 
+        where TEntity : class
     {
         /// <summary>
         /// The container.
@@ -35,11 +35,8 @@ where TEntity : class
         }
 
         /// <inheritdoc/>
-        public async Task<ItemResponse<TEntity>> AddAsync(TEntity entity, string partitionKey)
-        {
-            ItemResponse<TEntity> response = await this.container.CreateItemAsync<TEntity>(entity, new PartitionKey(partitionKey)).ConfigureAwait(false);
-            return response;
-        }
+        public async Task<ItemResponse<TEntity>> AddAsync(TEntity entity, string partitionKey) =>
+            await this.container.CreateItemAsync<TEntity>(entity, new PartitionKey(partitionKey)).ConfigureAwait(false);
 
         /// <inheritdoc/>
         public async Task<IEnumerable<TEntity>> GetAsync(string filterCriteria)

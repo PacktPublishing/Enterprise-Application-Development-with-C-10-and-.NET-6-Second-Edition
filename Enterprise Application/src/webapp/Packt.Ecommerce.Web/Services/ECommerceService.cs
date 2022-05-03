@@ -6,13 +6,10 @@
 
 namespace Packt.Ecommerce.Web.Services
 {
-    using System;
-    using System.Collections.Generic;
     using System.Net.Http;
     using System.Net.Http.Json;
     using System.Text;
     using System.Text.Json;
-    using System.Threading.Tasks;
     using Microsoft.Extensions.Options;
     using Packt.Ecommerce.Common.Models;
     using Packt.Ecommerce.Common.Options;

@@ -6,11 +6,6 @@
 
 namespace Packt.Ecommerce.Web.Controllers
 {
-    using System.Collections.Generic;
-    using System.Threading.Tasks;
-    using Microsoft.ApplicationInsights;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Logging;
     using Packt.Ecommerce.DTO.Models;
     using Packt.Ecommerce.Web.Contracts;
 
