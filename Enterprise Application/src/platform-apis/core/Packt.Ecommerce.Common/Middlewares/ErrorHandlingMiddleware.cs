@@ -44,7 +44,7 @@ namespace Packt.Ecommerce.Common.Middlewares
         /// <param name="applicationSettings">Options accessor.</param>
         public ErrorHandlingMiddleware(RequestDelegate requestDelegate, ILogger<ErrorHandlingMiddleware> logger, IOptions<ApplicationSettings> applicationSettings)
         {
-            NotNullValidator.ThrowIfNull(applicationSettings, nameof(applicationSettings));
+            ArgumentValidation.ThrowIfNull(applicationSettings, nameof(applicationSettings));
             this.requestDelegate = requestDelegate;
             this.logger = logger;
             this.includeExceptionDetailsInResponse = applicationSettings.Value.IncludeExceptionStackInResponse;

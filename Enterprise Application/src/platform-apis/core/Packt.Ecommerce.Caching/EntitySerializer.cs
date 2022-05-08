@@ -24,7 +24,7 @@ namespace Packt.Ecommerce.Caching
         /// <inheritdoc/>
         public async Task<T> DeserializeEntityAsync<T>(byte[] entity, CancellationToken cancellationToken = default)
         {
-            NotNullValidator.ThrowIfNull(entity, nameof(entity));
+            ArgumentValidation.ThrowIfNull(entity);
 
             using MemoryStream memoryStream = new MemoryStream(entity);
             var value = await JsonSerializer.DeserializeAsync<T>(memoryStream, cancellationToken: cancellationToken);

@@ -43,5 +43,12 @@ namespace Packt.Ecommerce.Order.Contracts
         /// <param name="order">The order.</param>
         /// <returns>The HTTP Response.</returns>
         Task<HttpResponseMessage> UpdateOrderAsync(OrderDetailsViewModel order);
+
+        /// <summary>
+        /// Calculates discount amount based on total value of the order.
+        /// </summary>
+        /// <param name="orderTotal">The response.</param>
+        /// <returns>The task.</returns>
+        double ComputeTotalDiscount(double orderTotal);
     }
 }

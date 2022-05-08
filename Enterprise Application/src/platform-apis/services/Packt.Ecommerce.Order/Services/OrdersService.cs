@@ -61,7 +61,7 @@ namespace Packt.Ecommerce.Order.Services
         /// <param name="cacheService">cache service.</param>
         public OrdersService(IHttpClientFactory httpClientFactory, IOptions<ApplicationSettings> applicationSettings, IMapper autoMapper, IDistributedCacheService cacheService)
         {
-            NotNullValidator.ThrowIfNull(applicationSettings, nameof(applicationSettings));
+            ArgumentValidation.ThrowIfNull(applicationSettings);
             IHttpClientFactory httpclientFactory = httpClientFactory;
             this.applicationSettings = applicationSettings;
             this.httpClient = httpclientFactory.CreateClient();
@@ -72,7 +72,7 @@ namespace Packt.Ecommerce.Order.Services
         /// <inheritdoc/>
         public async Task<OrderDetailsViewModel> AddOrderAsync(OrderDetailsViewModel order)
         {
-            NotNullValidator.ThrowIfNull(order, nameof(order));
+            ArgumentValidation.ThrowIfNull(order);
 
             // Order entity is used for Shopping cart and at any point as there can only be one shopping cart, checking for existing shopping cart
             var getExistingOrder = await this.GetOrdersAsync($" e.UserId = '{order.UserId}' and e.OrderStatus = '{OrderStatus.Cart}' ").ConfigureAwait(false);
@@ -178,6 +178,19 @@ namespace Packt.Ecommerce.Order.Services
             }
 
             return orderResponse;
+        }
+
+        /// <inheritdoc/>
+        public double ComputeTotalDiscount(double orderTotal)
+        {
+            if (orderTotal < 1000)
+            {
+                return orderTotal * 0.02;
+            }
+            else
+            {
+                return orderTotal * 0.05;
+            }
         }
 
         /// <summary>

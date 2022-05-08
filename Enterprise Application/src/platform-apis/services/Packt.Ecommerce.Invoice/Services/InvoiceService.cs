@@ -58,7 +58,7 @@ namespace Packt.Ecommerce.Invoice.Services
         /// <param name="cacheService">cache service.</param>
         public InvoiceService(IHttpClientFactory httpClientFactory, IOptions<ApplicationSettings> applicationSettings, IMapper autoMapper, IDistributedCacheService cacheService)
         {
-            NotNullValidator.ThrowIfNull(applicationSettings, nameof(applicationSettings));
+            ArgumentValidation.ThrowIfNull(applicationSettings, nameof(applicationSettings));
             IHttpClientFactory httpclientFactory = httpClientFactory;
             this.applicationSettings = applicationSettings;
             this.httpClient = httpclientFactory.CreateClient();
@@ -69,7 +69,7 @@ namespace Packt.Ecommerce.Invoice.Services
         /// <inheritdoc/>
         public async Task<InvoiceDetailsViewModel> AddInvoiceAsync(InvoiceDetailsViewModel invoice)
         {
-            NotNullValidator.ThrowIfNull(invoice, nameof(invoice));
+            ArgumentValidation.ThrowIfNull(invoice, nameof(invoice));
             invoice.Id = Guid.NewGuid().ToString();
             invoice.SoldBy = new SoldByViewModel()
             {

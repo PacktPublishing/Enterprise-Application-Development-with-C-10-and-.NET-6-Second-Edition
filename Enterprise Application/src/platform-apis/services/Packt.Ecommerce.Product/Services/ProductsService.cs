@@ -61,7 +61,7 @@ namespace Packt.Ecommerce.Product.Services
         /// <param name="cacheService">cache service.</param>
         public ProductsService(IHttpClientFactory httpClientFactory, IOptions<ApplicationSettings> applicationSettings, IMapper autoMapper, IDistributedCacheService cacheService)
         {
-            NotNullValidator.ThrowIfNull(applicationSettings, nameof(applicationSettings));
+            ArgumentValidation.ThrowIfNull(applicationSettings);
             IHttpClientFactory httpclientFactory = httpClientFactory;
             this.applicationSettings = applicationSettings;
             this.httpClient = httpclientFactory.CreateClient();
@@ -102,7 +102,7 @@ namespace Packt.Ecommerce.Product.Services
         /// <inheritdoc/>
         public async Task<ProductDetailsViewModel> AddProductAsync(ProductDetailsViewModel product)
         {
-            NotNullValidator.ThrowIfNull(product, nameof(product));
+            ArgumentValidation.ThrowIfNull(product);
             product.CreatedDate = DateTime.UtcNow;
             using var productRequest = new StringContent(JsonSerializer.Serialize(product), Encoding.UTF8, ContentType);
             var productResponse = await this.httpClient.PostAsync(new Uri($"{this.applicationSettings.Value.DataStoreEndpoint}api/products"), productRequest).ConfigureAwait(false);

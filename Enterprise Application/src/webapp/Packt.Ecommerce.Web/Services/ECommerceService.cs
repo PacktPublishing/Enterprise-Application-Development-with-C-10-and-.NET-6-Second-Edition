@@ -44,7 +44,7 @@ namespace Packt.Ecommerce.Web.Services
         /// <param name="applicationSettings">The application settings.</param>
         public ECommerceService(IHttpClientFactory httpClientFactory, IOptions<ApplicationSettings> applicationSettings)
         {
-            NotNullValidator.ThrowIfNull(applicationSettings, nameof(applicationSettings));
+            ArgumentValidation.ThrowIfNull(applicationSettings);
             IHttpClientFactory httpclientFactory = httpClientFactory;
             this.httpClient = httpclientFactory.CreateClient();
             this.applicationSettings = applicationSettings.Value;
@@ -101,7 +101,7 @@ namespace Packt.Ecommerce.Web.Services
         /// <inheritdoc/>
         public async Task<OrderDetailsViewModel> CreateOrUpdateOrder(OrderDetailsViewModel order)
         {
-            NotNullValidator.ThrowIfNull(order, nameof(order));
+            ArgumentValidation.ThrowIfNull(order, nameof(order));
             using var orderRequest = new StringContent(JsonSerializer.Serialize(order), Encoding.UTF8, ContentType);
             var orderResponse = await this.httpClient.PostAsync(new Uri($"{this.applicationSettings.OrdersApiEndpoint}"), orderRequest).ConfigureAwait(false);
 

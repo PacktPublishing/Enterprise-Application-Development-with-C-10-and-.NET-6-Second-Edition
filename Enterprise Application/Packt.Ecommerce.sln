@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{CED34EE8-1C5A-427D-841B-F1103BE67D1B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6D6E345C-884F-49B6-80AB-272035AA1644}"
-	ProjectSection(SolutionItems) = preProject
-		src\test\Packt.Ecommerce.Services.Test\Packt.Ecommerce.Services.Test.csproj = src\test\Packt.Ecommerce.Services.Test\Packt.Ecommerce.Services.Test.csproj
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{011967DE-AE7D-44C5-A21E-3457A17AFE33}"
 EndProject
@@ -54,9 +51,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Packt.Ecommerce.DataAccess"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Packt.Ecommerce.Invoice", "src\platform-apis\services\Packt.Ecommerce.Invoice\Packt.Ecommerce.Invoice.csproj", "{1779897C-B58A-4C78-A102-3923EAC084F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Packt.Ecommerce.Order", "src\platform-apis\services\Packt.Ecommerce.Order\Packt.Ecommerce.Order.csproj", "{98660D41-4109-4DDE-8E5F-6308E38D9168}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Packt.Ecommerce.Order", "src\platform-apis\services\Packt.Ecommerce.Order\Packt.Ecommerce.Order.csproj", "{98660D41-4109-4DDE-8E5F-6308E38D9168}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Packt.Ecommerce.Product", "src\platform-apis\services\Packt.Ecommerce.Product\Packt.Ecommerce.Product.csproj", "{BB3CE0FE-542B-46D4-B5B8-5743F0576F90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Packt.Ecommerce.Product", "src\platform-apis\services\Packt.Ecommerce.Product\Packt.Ecommerce.Product.csproj", "{BB3CE0FE-542B-46D4-B5B8-5743F0576F90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
