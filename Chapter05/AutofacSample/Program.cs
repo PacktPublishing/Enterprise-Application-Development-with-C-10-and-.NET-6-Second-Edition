@@ -1,6 +1,5 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using AutofacSample.Services;
 using DITypes.Service;
 
 var builder = WebApplication.CreateBuilder(args);

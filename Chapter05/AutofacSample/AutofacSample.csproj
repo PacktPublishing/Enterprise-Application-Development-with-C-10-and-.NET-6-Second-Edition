@@ -7,8 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="..\DITypes\Service\IWeatherProvider.cs" Link="Services\IWeatherProvider.cs" />
+    <Compile Include="..\DITypes\Service\WeatherProvider.cs" Link="Services\WeatherProvider.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.2.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutofacSample.Services;
+﻿using DITypes.Models;
+using DITypes.Service;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace AutofacSample.Controllers
 {
@@ -25,7 +21,7 @@ namespace AutofacSample.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            return weatherProvider.GetForecast();
+            return weatherProvider.GetForecastOfLocation("location");
         }
     }
 }
