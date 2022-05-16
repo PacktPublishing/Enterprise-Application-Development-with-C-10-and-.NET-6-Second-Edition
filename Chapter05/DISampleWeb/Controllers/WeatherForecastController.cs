@@ -13,14 +13,19 @@ namespace DISampleWeb.Controllers
     public class WeatherForecastController : Controller
     {
         private readonly ILogger<WeatherForecastController> _logger;
-        private readonly IEnumerable<IWeatherForcastService> weatherForcastService;
+        private readonly IEnumerable<IWeatherForcastService> weatherForcastServices;
+        //private readonly IWeatherForcastService weatherForcastService;
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger,
+            //This will retrieve the last registration to IWeatherForcastService
+            //IWeatherForcastService weatherForcastService
+
             //Use IEnumerable to inject all the services registered with IWeatherForcastService
-            IEnumerable<IWeatherForcastService> weatherForcastService)
+            IEnumerable<IWeatherForcastService> weatherForcastServices)
         {
             _logger = logger;
-            this.weatherForcastService = weatherForcastService;
+            //this.weatherForcastService = weatherForcastService;
+            this.weatherForcastServices = weatherForcastServices;
         }
 
       
