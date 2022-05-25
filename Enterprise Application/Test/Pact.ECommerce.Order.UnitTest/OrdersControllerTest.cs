@@ -11,7 +11,7 @@ namespace Pact.ECommerce.Order.UnitTest
     public class OrdersControllerTest
     {
         [Fact]
-        public async Task Create_Object_OfType_OrderController()
+        public async Task Create_Object_OfType_OrdersController()
         {
             OrdersController testObject = new OrdersController(null);
             Assert.NotNull(testObject);
