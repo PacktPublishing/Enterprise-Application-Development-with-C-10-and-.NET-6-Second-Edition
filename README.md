@@ -70,3 +70,7 @@ the company as a software engineering manager. He has over 17 years of software 
 
 ## Other books by the authors
 [Enterprise Application Development with C# 9 and .NET 5](https://www.packtpub.com/programming/enterprise-application-development-with-c-9-and-net-5?utm_source=github&utm_medium=repository&utm_campaign=9781800209442)
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781803232973">https://packt.link/free-ebook/9781803232973 </a> </p>
